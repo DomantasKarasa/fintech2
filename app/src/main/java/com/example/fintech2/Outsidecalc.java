@@ -4,6 +4,11 @@ import java.util.Objects;
 
 public class Outsidecalc {
     public int Count(String _wordToCount, String _countType) {
+        _wordToCount = _wordToCount.trim();
+        if(Objects.equals(_wordToCount, ""))
+        {
+            return 0;
+        }
         if (Objects.equals(_countType,"Words"))
         {
             String[] parts = this.SplitString(_wordToCount);
